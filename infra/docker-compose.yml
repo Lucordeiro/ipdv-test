@@ -1,0 +1,32 @@
+services:
+  ipdv-postgres-server:
+    image: postgres:15.3-alpine
+    container_name: ipdv-postgres-server
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks: 
+      - ipdv_network
+  ipdv-pgadmin-client:
+    image: dpage/pgadmin4:latest
+    container_name: ipdv-pgadmin-client
+    restart: always
+    depends_on:
+      - ipdv-postgres-server
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ipdv@localhost.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - 8080:80
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin
+    networks: 
+      - ipdv_network
+networks:
+  ipdv_network:
+    driver: bridge
