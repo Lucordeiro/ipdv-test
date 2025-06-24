@@ -5,6 +5,7 @@ Este projeto é um sistema fullstack desenvolvido para gerenciar usuários e seu
 
 - 🖥️ **Backend:** Node.js + Express + Prisma + PostgreSQL (TypeScript, padrão SOLID)
 - 🌐 **Frontend:** Vue 3 + Vite + Vuetify + TypeScript
+
 Obs: Lembrando que este projeto é bem básico apenas para demonstração básica de como seria a arquitetura de desenvolvimento do sistema. Algumas coisas importantes como testes automatizados, conteinerização e logs, nao foram aplicados por conta da falta de tempo e por ser apenas um teste. 
 ---
 
