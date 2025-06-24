@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="d-flex align-center justify-center bg-gradient fill-height"
+    class="d-flex align-center justify-center bg-gradient full-screen"
   >
     <v-card
       class="pa-8"
@@ -96,5 +96,9 @@ async function handleLogin() {
 <style scoped>
 .bg-gradient {
   background: linear-gradient(135deg, #4f46e5, #3b82f6);
+}
+.full-screen {
+  height: 100vh !important;
+  width: 100vw;
 }
 </style>
