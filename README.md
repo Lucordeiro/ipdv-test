@@ -118,7 +118,8 @@ JWT_EXPIRES="1h"
 
 ### 4️⃣ Rode as migrations e o seed:
 ```bash
-npx prisma migrate dev
+npm run prisma:migrate
+npm run prisma:seed
 ```
 ### 5️⃣ Inicie o backend:
 ```bash
